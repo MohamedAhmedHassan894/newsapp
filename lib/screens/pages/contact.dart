@@ -32,9 +32,11 @@ class _ContactState extends State<Contact> {
       appBar: AppBar(
         title: Text("Contact Us"),
       ),
-      body: Padding(
-        padding: EdgeInsets.all(18),
-        child:(isLoading?loading():contactForm()),
+      body: SingleChildScrollView(
+              child: Padding(
+          padding: EdgeInsets.all(18),
+          child:(isLoading?loading():contactForm()),
+        ),
       ),
     );
   }

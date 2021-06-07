@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'modules/post.dart';
+
 class SinglePost extends StatefulWidget {
   final Post post;
   SinglePost(this.post);
@@ -14,7 +15,7 @@ class _SinglePostState extends State<SinglePost> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        slivers: <Widget>[
+        slivers: [
           SliverAppBar(
               expandedHeight: 300.0,
               floating: true,
@@ -74,7 +75,7 @@ class _SinglePostState extends State<SinglePost> {
             children: <Widget>[
               CircleAvatar(
                 backgroundImage:
-                ExactAssetImage("assets/images/place_holder_img.jpg"),
+                    ExactAssetImage("assets/images/place_holder_img.jpg"),
               ),
               SizedBox(
                 width: 16,
@@ -110,8 +111,8 @@ class _SinglePostState extends State<SinglePost> {
                   decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'Write Comment here!',
-                      contentPadding: EdgeInsets.only( left: 16 , top: 24 , bottom: 28 )
-                  ),
+                      contentPadding:
+                          EdgeInsets.only(left: 16, top: 24, bottom: 28)),
                 ),
               ),
               FlatButton(

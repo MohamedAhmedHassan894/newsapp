@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/lang/appLocal.dart';
 import 'package:newsapp/modules/post.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
@@ -49,3 +50,9 @@ Widget authorHandling(Post post){
     return Text(post.author);
   }
 }
+
+// helper for localization
+String getTranslated(BuildContext context, String key){
+  // print(AppLocale.of(context).getTranslated(key));
+  return AppLocale.of(context).getTranslated(key);
+} 
